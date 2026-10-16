@@ -1,0 +1,113 @@
+[0m11:10:41.359170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74830f21abd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74830c513890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74830c38eb10>]}
+
+
+============================== 11:10:41.367826 | 54ee3467-9579-4f4b-9b4f-b13c5ce2651f ==============================
+[0m11:10:41.367826 [info ] [MainThread]: Running with dbt=1.11.6
+[0m11:10:41.372289 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'no_print': 'None', 'printer_width': '80', 'log_format': 'default', 'write_json': 'True', 'log_path': 'logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'static_parser': 'True', 'partial_parse': 'True', 'fail_fast': 'False', 'quiet': 'False', 'indirect_selection': 'eager', 'empty': 'None', 'profiles_dir': '/root/.dbt', 'introspect': 'True', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'target_path': 'None', 'debug': 'False', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:12:01.549951 [debug] [MainThread]: Starter project path: /usr/local/lib/python3.11/site-packages/dbt/include/starter_project
+[0m11:12:02.012390 [info ] [MainThread]: 
+Your new dbt project "E_commerce" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:12:02.017476 [info ] [MainThread]: Setting up your profile.
+[0m11:14:33.375122 [error] [MainThread]: Encountered an error:
+
+[0m11:14:33.408098 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/usr/local/lib/python3.11/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/usr/local/lib/python3.11/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/usr/local/lib/python3.11/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/click/termui.py", line 262, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/click/termui.py", line 245, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m11:14:33.418961 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 232.14507, "process_in_blocks": "96880", "process_kernel_time": 0.611672, "process_mem_max_rss": "105836", "process_out_blocks": "2136", "process_user_time": 1.685221}
+[0m11:14:33.422193 [debug] [MainThread]: Command `dbt init` failed at 11:14:33.421835 after 232.15 seconds
+[0m11:14:33.424948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74830c41b7d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74830c72b150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x748310ae6a90>]}
+[0m11:14:33.427482 [debug] [MainThread]: Flushing usage events
+[0m11:14:53.051909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7127350ba150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7127323f2390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7127326ea1d0>]}
+
+
+============================== 11:14:53.060134 | c245fa84-a5d3-4b1b-acb8-62bacb2b730e ==============================
+[0m11:14:53.060134 [info ] [MainThread]: Running with dbt=1.11.6
+[0m11:14:53.062626 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'log_format': 'default', 'profiles_dir': '/root/.dbt', 'write_json': 'True', 'introspect': 'True', 'warn_error': 'None', 'partial_parse': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'no_print': 'None', 'static_parser': 'True', 'cache_selected_only': 'False', 'use_colors': 'True', 'invocation_command': 'dbt init', 'debug': 'False', 'printer_width': '80', 'version_check': 'True', 'empty': 'None', 'use_experimental_parser': 'False', 'target_path': 'None', 'log_path': 'logs', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m11:15:00.140871 [info ] [MainThread]: A project called E_commerce already exists here.
+[0m11:15:00.143370 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 7.15748, "process_in_blocks": "57272", "process_kernel_time": 0.399865, "process_mem_max_rss": "101316", "process_out_blocks": "2136", "process_user_time": 1.814124}
+[0m11:15:00.145164 [debug] [MainThread]: Command `dbt init` succeeded at 11:15:00.145020 after 7.16 seconds
+[0m11:15:00.146863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7127322af910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7127322b68d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7127323f29d0>]}
+[0m11:15:00.148790 [debug] [MainThread]: Flushing usage events
+[0m11:15:01.173417 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:15:19.574860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7903c8aae410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7903c6b0f510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7903c5db7b90>]}
+
+
+============================== 11:15:19.582128 | 355f44bc-4dfe-4d21-8df1-20cc52cc4cfa ==============================
+[0m11:15:19.582128 [info ] [MainThread]: Running with dbt=1.11.6
+[0m11:15:19.584227 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'use_colors': 'True', 'invocation_command': 'dbt init', 'version_check': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/root/.dbt', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'printer_width': '80', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'target_path': 'None', 'no_print': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'warn_error': 'None'}
+[0m11:15:25.630312 [info ] [MainThread]: A project called e_commerce already exists here.
+[0m11:15:25.634266 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 6.1146455, "process_in_blocks": "0", "process_kernel_time": 0.271992, "process_mem_max_rss": "101632", "process_out_blocks": "2136", "process_user_time": 1.283963}
+[0m11:15:25.637082 [debug] [MainThread]: Command `dbt init` succeeded at 11:15:25.636865 after 6.12 seconds
+[0m11:15:25.639684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7903c5caf810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7903c5fc3210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7903ca43a650>]}
+[0m11:15:25.641948 [debug] [MainThread]: Flushing usage events
+[0m11:15:26.750930 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:15:55.268960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd8fa3ebf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd8fa42a8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd8fb74f3d0>]}
+
+
+============================== 11:15:55.276534 | e6d3893b-9c19-4ace-b079-9b88c1da3fac ==============================
+[0m11:15:55.276534 [info ] [MainThread]: Running with dbt=1.11.6
+[0m11:15:55.279198 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'fail_fast': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'profiles_dir': '/root/.dbt', 'indirect_selection': 'eager', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'log_path': 'logs', 'introspect': 'True', 'printer_width': '80', 'log_cache_events': 'False', 'quiet': 'False', 'use_colors': 'True', 'write_json': 'True', 'invocation_command': 'dbt init', 'partial_parse': 'True', 'static_parser': 'True'}
+[0m11:16:00.349676 [debug] [MainThread]: Starter project path: /usr/local/lib/python3.11/site-packages/dbt/include/starter_project
+[0m11:16:00.950579 [info ] [MainThread]: 
+Your new dbt project "ecommerce" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:16:00.954180 [info ] [MainThread]: Setting up your profile.
+[0m11:18:55.622036 [info ] [MainThread]: Profile ecommerce written to /root/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:18:55.627152 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 180.43907, "process_in_blocks": "97264", "process_kernel_time": 0.459941, "process_mem_max_rss": "105968", "process_out_blocks": "2136", "process_user_time": 1.766501}
+[0m11:18:55.629841 [debug] [MainThread]: Command `dbt init` succeeded at 11:18:55.629518 after 180.44 seconds
+[0m11:18:55.632562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd8fa82f650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd8febbe690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7dd8febbe610>]}
+[0m11:18:55.634222 [debug] [MainThread]: Flushing usage events
+[0m11:18:56.660200 [debug] [MainThread]: An error was encountered while trying to flush usage events
